@@ -1,0 +1,26 @@
+/* main {
+} */
+
+.todays-greeting {
+  /* background-color: #282c34; */
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  /* font-size: calc(10px + 2vmin); */
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.todays-greeting h1 {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.todays-workout-title {
+  font-weight: 800;
+  font-size: 40px;
+  color: #f4f1de;
+}
