@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { IconContext } from 'react-icons'
 import Navbar from '../Navbar/Navbar'
 
@@ -8,6 +8,13 @@ import { FaUserCircle } from 'react-icons/fa'
 import { HiMenu } from 'react-icons/hi'
 
 export default function Header() {
+  const [menuToggle, setMenuToggle] = useState(false)
+  function handleMenu() {
+    // I dont know why this makes the page change faster
+    setMenuToggle(!menuToggle)
+    // console.log(menuToggle)
+  }
+
   return (
     <div>
       <header>
@@ -18,7 +25,7 @@ export default function Header() {
         </div>
       </header>
       <div className="ham-menu-bg">
-        <div className="floating-ham">
+        <div className="floating-ham" onClick={handleMenu}>
           <IconContext.Provider value={{ color: '#7BC9BE' }}>
             <div>
               <HiMenu />
@@ -27,7 +34,7 @@ export default function Header() {
         </div>
       </div>
 
-      <Navbar />
+      {menuToggle && <Navbar onChange={handleMenu} />}
     </div>
   )
 }

@@ -1,17 +1,41 @@
-.navbar-main {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-
-  background-color: #f4f1de;
-
+.navbar-container {
   position: fixed;
   top: 0;
-  height: 100vh;
   width: 100vw;
 
   z-index: 999;
+}
 
+.navbar-main {
+  display: flex;
+  flex-direction: column;
+
+  height: 100vh;
+
+  padding: 20px;
+
+  background-color: #449dd1;
+}
+
+.menu-option {
+  margin-top: 15px;
+  font-size: 26px;
   text-decoration: none;
-  display: none;
+  color: #f4f1de;
+}
+
+.menu-option:hover {
+  color: #173753;
+  background-color: #a1e8af;
+}
+
+.close-menu {
+  position: fixed;
+  bottom: 20px;
+  right: 25px;
+}
+
+.close-menu svg {
+  height: 90px;
+  width: 90px;
 }
