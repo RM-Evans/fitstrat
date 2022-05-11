@@ -1,5 +1,6 @@
 import React from 'react'
 import { IconContext } from 'react-icons'
+import Navbar from '../Navbar/Navbar'
 
 import './Header.css'
 import { FaUserCircle } from 'react-icons/fa'
@@ -25,6 +26,8 @@ export default function Header() {
           </IconContext.Provider>
         </div>
       </div>
+
+      <Navbar />
     </div>
   )
 }

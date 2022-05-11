@@ -1,0 +1,17 @@
+.navbar-main {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  background-color: #f4f1de;
+
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+
+  z-index: 999;
+
+  text-decoration: none;
+  display: none;
+}
