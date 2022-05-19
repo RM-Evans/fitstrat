@@ -3,6 +3,7 @@ import Form from 'react-bootstrap/Form'
 import { useFormik } from 'formik'
 
 export default function NewWorkout() {
+
   const formik = useFormik({
     initialValues: {
       nameOfWorkout: '',
@@ -18,7 +19,7 @@ export default function NewWorkout() {
         <Form.Group controlId="formBasicEmail" className="formMain">
           <Form.Label>Workout Name</Form.Label>
           <Form.Control
-            type="email"
+            type="text"
             placeholder="Back and Bi, Leg Day, etc..."
             name="nameOfWorkout"
             onChange={formik.handleChange}
