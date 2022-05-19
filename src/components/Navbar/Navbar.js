@@ -18,8 +18,12 @@ export default function Navbar(props) {
           Home
         </Link>
 
-        <Link to="/newWorkout" onClick={handleMenu} className="menu-option">
+        <Link to="/newworkout" onClick={handleMenu} className="menu-option">
           Create new workout
+        </Link>
+
+        <Link to="/signup" onClick={handleMenu} className="menu-option"> 
+        Signup
         </Link>
         <div className="close-menu" onClick={handleMenu}>
           <IconContext.Provider value={{ color: '#f4f1de' }}>

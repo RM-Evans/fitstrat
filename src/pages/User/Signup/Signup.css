@@ -1,0 +1,10 @@
+.signup-container {
+    height: 100vh;
+  }
+  
+  p {
+    display: flex;
+    flex-direction: column;
+    margin: 0 30px;
+  }
+  
