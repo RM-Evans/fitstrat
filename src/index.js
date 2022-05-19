@@ -1,6 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
+
 import ReactDOM from 'react-dom/client'
 import './index.css'
 import App from './App'
@@ -9,6 +10,7 @@ import Header from './components/Header/Header'
 
 // import Home from '../src/pages/Home/Home'
 import NewWorkout from './pages/NewWorkout/NewWorkout'
+import SignUp from './pages/User/Signup/Signup'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
@@ -18,10 +20,13 @@ root.render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="newworkout" element={<NewWorkout />} />
+        <Route path="signup" element={<SignUp />}/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
 )
+
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
