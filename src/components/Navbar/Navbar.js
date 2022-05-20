@@ -1,15 +1,15 @@
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
-import { IconContext } from 'react-icons'
+import { IconContext } from 'react-icons';
 
-import { IoMdCloseCircleOutline } from 'react-icons/io'
+import { IoMdCloseCircleOutline } from 'react-icons/io';
 
-import './Navbar.css'
+import './Navbar.css';
 
 export default function Navbar(props) {
   function handleMenu(e) {
-    props.onChange(e.target.value)
-    console.log(props)
+    props.onChange(e.target.value);
+    console.log(props);
   }
   return (
     <div className="navbar-container">
@@ -22,11 +22,12 @@ export default function Navbar(props) {
           Create new workout
         </Link>
 
-        <Link to="/signup" onClick={handleMenu} className="menu-option"> 
-        Signup
+        <Link to="/signup" onClick={handleMenu} className="menu-option">
+          Signup
         </Link>
         <div className="close-menu" onClick={handleMenu}>
-          <IconContext.Provider value={{ color: '#f4f1de' }}>
+
+          <IconContext.Provider value={{ className: 'close-me' }}>
             <div>
               <IoMdCloseCircleOutline />
             </div>
@@ -34,5 +35,5 @@ export default function Navbar(props) {
         </div>
       </nav>
     </div>
-  )
+  );
 }

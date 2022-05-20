@@ -1,8 +1,9 @@
-import React from 'react'
-import Form from 'react-bootstrap/Form';
+import React from 'react';
 import Button from 'react-bootstrap/Button';
-import { useFormik } from 'formik'
+import Form from 'react-bootstrap/Form';
+import { useFormik } from 'formik';
 import { db } from '../../../firestore';
+import './Signup.css';
 
 
 export default function Signup() {
@@ -13,47 +14,48 @@ export default function Signup() {
       signUpPassword: ''
     },
     onSubmit: values => {
-      let ref1 = db.database().ref().child('users').push()
-      let key = ref1.key
-      values.id = key
-      ref1.set(values)
-    //  alert(JSON.stringify(values, null, 2));
+      let ref1 = db.database().ref().child('users').push();
+      let key = ref1.key;
+      values.id = key;
+      ref1.set(values);
+      //  alert(JSON.stringify(values, null, 2));
     },
-  })
-  console.log("hey, listen", db)
-  console.log('form values', formik.values)
+  });
+  console.log("hey, listen", db);
+  console.log('form values', formik.values);
 
   return (
     <div className="signup-container">
-      <p>Signup Pagereeee</p>
-      <Form onSubmit={formik.handleSubmit}>
-        <Form.Group controlId="formBasicEmail" className='formMain'>
-          <Form.Label>Email address</Form.Label>
-          <Form.Control 
-            type="email" 
-            placeholder="Enter email"
+      <Form onSubmit={formik.handleSubmit} className="signup-form">
+        <Form.Group controlId="formBasicEmail" className='signup-form-group'>
+          <Form.Label className="form-label">Email address</Form.Label>
+          <Form.Control
+            className="form-input-field"
+            type="email"
+            placeholder="Email"
             name="signUpEmail"
             onChange={formik.handleChange}
             value={formik.values.signUpEmail}
-            />
+          />
         </Form.Group>
 
-        <Form.Group controlId="formBasicPassword" className='formMain'>
-          <Form.Label>Password</Form.Label>
-          <Form.Control 
-          type="password"
-           placeholder="Password"
-           name="signUpPassword"
-           onChange={formik.handleChange}
-           value={formik.values.signUpPassword}
-            />
+        <Form.Group controlId="formBasicPassword" className='signup-form-group'>
+          <Form.Label className="form-label">Password</Form.Label>
+          <Form.Control
+            className="form-input-field"
+            type="password"
+            placeholder="Password"
+            name="signUpPassword"
+            onChange={formik.handleChange}
+            value={formik.values.signUpPassword}
+          />
         </Form.Group>
-        <Button type="submit" variant="outline-primary">Signup</Button>
+        <Button type="submit" className="signup-submit-btn">Signup</Button>
 
       </Form>
 
-      
-      </div>
-  )
+
+    </div >
+  );
 }
 

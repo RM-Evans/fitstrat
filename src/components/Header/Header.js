@@ -1,17 +1,17 @@
-import React, { useState } from 'react'
-import { IconContext } from 'react-icons'
-import Navbar from '../Navbar/Navbar'
+import React, { useState } from 'react';
+import { IconContext } from 'react-icons';
+import Navbar from '../Navbar/Navbar';
 
-import './Header.css'
-import { FaUserCircle } from 'react-icons/fa'
+import './Header.css';
+import { FaUserCircle } from 'react-icons/fa';
 
-import { HiMenu } from 'react-icons/hi'
+import { HiMenu } from 'react-icons/hi';
 
 export default function Header() {
-  const [menuToggle, setMenuToggle] = useState(false)
+  const [menuToggle, setMenuToggle] = useState(false);
   function handleMenu() {
     // I dont know why this makes the page change faster
-    setMenuToggle(!menuToggle)
+    setMenuToggle(!menuToggle);
     // console.log(menuToggle)
   }
 
@@ -19,7 +19,7 @@ export default function Header() {
     <div>
       <header>
         <div className="profile-icon">
-          <IconContext.Provider value={{ color: '#f4f1de' }}>
+          <IconContext.Provider value={{ color: '#F8F6F2' }}>
             <FaUserCircle />
           </IconContext.Provider>
         </div>
@@ -36,5 +36,5 @@ export default function Header() {
 
       {menuToggle && <Navbar onChange={handleMenu} />}
     </div>
-  )
+  );
 }

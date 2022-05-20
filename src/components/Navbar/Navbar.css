@@ -20,7 +20,7 @@
 
   font-size: 28px;
   text-decoration: none;
-  color: #f4f1de;
+  color: #F8F6F2;
 }
 
 .menu-option:hover {
@@ -34,7 +34,14 @@
   right: 25px;
 }
 
-.close-menu svg {
+.close-me {
+  color: #F8F6F2;
+  
   height: 90px;
   width: 90px;
+}
+
+.close-me:hover {
+  color: #173753;
+  cursor: pointer;
 }

@@ -1,8 +1,8 @@
-.new-workout-container {
-  height: 100vh;
-}
+/* .new-workout-container {
+  
+} */
 
-.formMain {
+.workout-form-group {
   display: flex;
   flex-direction: column;
   margin: 0 30px;

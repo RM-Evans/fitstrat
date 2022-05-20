@@ -1,6 +1,7 @@
 header {
   display: flex;
   justify-content: right;
+  padding: 30px 30px 10px;
 }
 
 .profile-icon svg {
@@ -13,7 +14,7 @@ header {
   bottom: 30px;
 
   right: 30px;
-  background-color: #f4f1de;
+  background-color: #F8F6F2;
   border-radius: 50%;
   width: 75px;
   height: 75px;
@@ -24,13 +25,12 @@ header {
 }
 
 .floating-ham svg {
-  padding-top: 5px;
   width: 50px;
   height: 50px;
 }
 
-@media (min-width: 600px) {
+/* @media (min-width: 600px) {
   .ham-menu-bg {
     display: none;
   }
-}
+} */
