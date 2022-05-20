@@ -14,15 +14,19 @@ export default function Signup() {
       signUpPassword: ''
     },
     onSubmit: values => {
+
       let ref1 = db.database().ref().child('users').push();
       let key = ref1.key;
       values.id = key;
       ref1.set(values);
+      console.log(ref1.key);
       //  alert(JSON.stringify(values, null, 2));
     },
   });
+
   console.log("hey, listen", db);
   console.log('form values', formik.values);
+
 
   return (
     <div className="signup-container">
