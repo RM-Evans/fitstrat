@@ -1,9 +1,70 @@
-/* .new-workout-container {
-  
+.new-workout-container {
+  display: flex;
+  margin: 0 30px;
+  justify-content: center;
+}
+/* for input field
+:focus {
+  color: #173753;
+  background-color: #fff;
+  border-color: #173753;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(6, 184, 152, 0.5);
 } */
 
 .workout-form-group {
   display: flex;
   flex-direction: column;
-  margin: 0 30px;
+}
+
+.new-exercise-form,
+Button {
+  margin-top: 20px;
+}
+
+.sets-reps-group {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+/* .sets-reps-item {
+  flex: auto;
+} */
+Button {
+  padding: 10px;
+  width: 100%;
+
+  border-radius: 10px;
+  border: none;
+}
+
+.save-workout-btn,
+#dropdown-basic-btn,
+#add-exercise-btn {
+  flex: auto;
+
+  padding: 10px;
+  width: 100%;
+
+  border-radius: 10px;
+  border: none;
+
+  font-size: 18px;
+}
+
+.save-workout-btn {
+  color: #f8f6f2;
+  background-color: #173753;
+}
+
+#dropdown-basic-btn,
+#add-exercise-btn {
+  background-color: #f8f6f2;
+  color: #173753;
+}
+
+.save-workout-btn:hover {
+  color: #173753;
+  background-color: #f8f6f2;
 }
