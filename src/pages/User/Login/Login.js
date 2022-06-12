@@ -8,7 +8,7 @@ import { db, auth } from '../../../firestore'
 import { createUserWithEmailAndPassword } from 'firebase/auth'
 import '../UserLoginSignup.css'
 
-export default function Signup() {
+export default function Login() {
   const [errorMessage, setErrorMessage] = useState('')
   const formik = useFormik({
     initialValues: {
@@ -51,7 +51,7 @@ export default function Signup() {
 
   return (
     <div className="signup-container">
-      <Form onSubmit={formik.handleSubmit} className="signup-form">
+      <Form onSubmit={formik.handleSubmit} className="login-form">
         <Form.Group controlId="formBasicEmail" className="form-group">
           <Form.Label className="form-label">Email address</Form.Label>
           <Form.Control
@@ -77,12 +77,14 @@ export default function Signup() {
           />
         </Form.Group>
         <Button type="submit" className="submit-btn">
-          Signup
+          Login
         </Button>
       </Form>
       <p className="looking-for-other-form">
-        Already have an account? <Link to="/login">Login </Link>
+        Don't have an account? <Link to="/signup">Create an account. </Link>
       </p>
+
+      {/* <p>forgot your password?</p> */}
     </div>
   )
 }
