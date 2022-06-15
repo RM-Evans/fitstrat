@@ -1,0 +1,18 @@
+.show {
+  display: block;
+
+  background-color: floralwhite;
+
+  width: 90vw;
+  height: 50vh;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+}
+
+.hide {
+  display: none;
+}

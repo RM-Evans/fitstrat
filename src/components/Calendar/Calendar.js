@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import './Calendar.css'
 
 import FullCalendar from '@fullcalendar/react' // must go before plugins
 import dayGridPlugin from '@fullcalendar/daygrid' // a plugin!
@@ -7,20 +8,31 @@ import listPlugin from '@fullcalendar/list'
 // import scrollGridPlugin from '@fullcalendar/scrollgrid'
 
 export default function Calendar() {
-  // const [dateModal, setDateModal]
+  const [dateModal, setDateModal] = useState(false)
+
+  const handleModal = () => {
+    setDateModal((tog) => !tog)
+    console.log(dateModal)
+  }
+  const closeModal = () => setDateModal(false)
+
   return (
     <div>
-      <FullCalendar
-        plugins={[
-          dayGridPlugin,
-          interactionPlugin,
-          listPlugin,
-          // scrollGridPlugin,
-        ]}
-        initialView="dayGridWeek"
-      />
+      <div onClick={closeModal}>
+        <FullCalendar
+          plugins={[
+            dayGridPlugin,
+            interactionPlugin,
+            listPlugin,
+            // scrollGridPlugin,
+          ]}
+          initialView="dayGridWeek"
+        />
 
-      {/* <button onClick="open-">addstuff</button> */}
+        <div className={dateModal ? 'show' : 'hide'}>modal</div>
+      </div>
+
+      <button onClick={handleModal}>addstuff</button>
     </div>
   )
 }
